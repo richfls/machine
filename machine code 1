@@ -1,0 +1,22 @@
+from matplotlib import pyplot
+import numpy
+
+bins = []
+
+numlist = numpy.random.randint(200, size = 50)
+
+print("the list of numbers we generated is:", numlist)
+
+screen = pyplot.figure(figsize = (12,8))
+
+#pyplot.hist(numlist)
+
+#pyplot.hist(numlist,10)
+for i in range(0,201,20):
+    bins.append(i)
+
+pyplot.hist(numlist, bins)
+
+pyplot.title("Totally Bonkerballs Histogram OMG!!!")
+
+pyplot.show()
